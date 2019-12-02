@@ -13,7 +13,7 @@ class HomePage extends React.Component {
      }
     render() { 
         return ( 
-        <Container className="col-md-9 .offset-md-3">
+        <Container className=".offset-md-2 col-md-10 ">
                 <Row>
 {(this.state.songs).map((song, index) => (
     <Col md="3">
