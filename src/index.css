@@ -278,6 +278,12 @@ ul {
   color: white;
 }
 
+.card {
+  height:18em;
+  color: #fff;
+  
+}
+
 #search {
   display: none;
 }
