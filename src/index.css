@@ -1,3 +1,7 @@
+* {
+margin:0;
+}
+
 body {
   background: rgb(46, 63, 87);
   background: linear-gradient(
