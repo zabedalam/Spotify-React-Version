@@ -8,12 +8,14 @@ const scopes=[
 "user-read-playback-state",
 "user-top-read",
 "user-modify-playback-state",]
+
+//Pulling the access token from ULR
 export const getTokenFromResponse=()=>{
     return window.location.hash
-    .substring()
+    .substring(1)
     .split("&")
     .reduce((initial,item)=>{
-        var parts=item.split("=")
+        let parts=item.split("=")
         initial[parts[0]]=decodeURIComponent(parts[1])
         return initial
     },{})
