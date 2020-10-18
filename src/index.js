@@ -4,8 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import MainComponent from './Components/MainComponent'
-
-ReactDOM.render(<MainComponent />, document.getElementById('root'));
+import { DataLayer } from './Components/datalayer/datalayer';
+import reducer, {initialState} from "./Components/reducer/reducer"
+ReactDOM.render(
+    <DataLayer initialState={initialState} reducer={reducer}>
+<MainComponent />
+</DataLayer>, 
+document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

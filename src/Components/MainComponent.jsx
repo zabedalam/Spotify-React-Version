@@ -7,6 +7,7 @@ import {Container} from "reactstrap"
 import Login from "../Components/login/login"
 import { getTokenFromResponse } from "./spotify/spotify"
 import SpotifyWebApi from "spotify-web-api-js"
+import Player from "../Components/player/player"
 
 const spotify=new SpotifyWebApi()
 function MainComponent(){
@@ -31,7 +32,7 @@ console.log("I HAVE A TOKEN >>>",token);
         return ( 
              <Container>
                  {
-                     token?(<h1>I am logged In</h1>):(<Login/>)
+                     token?<Player/>:(<Login/>)
                  }
             {/* //     <Navbar></Navbar>
             //     <SideNavbar></SideNavbar>
