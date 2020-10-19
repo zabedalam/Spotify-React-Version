@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react"
-import {Container} from "reactstrap"
+// import {Container} from "reactstrap"
 // import HomePage from "./HomePage"
 // import Navbar from "./Navbar";
 // import SideNavbar from "./SideNavbar";
@@ -42,7 +42,7 @@ console.log("I HAVE A TOKEN >>>",token);
     console.log("🐱‍",token)
    
         return ( 
-             <Container>
+             <div>
                  {
                      token?<Player spotify={spotify}/>:(<Login/>)
                  }
@@ -51,7 +51,7 @@ console.log("I HAVE A TOKEN >>>",token);
             // <HomePage></HomePage>
             // <Footer></Footer> */}
             {/* <Login/> */}
-             </Container>
+             </div>
          );
     
 }
