@@ -36,11 +36,11 @@ export default function Footer() {
             <Grid item>
               <PlaylistPlayIcon />
             </Grid>
-            <Grid>
+            <Grid item>
               <VolumeDownIcon />
             </Grid>
-            <Grid>
-              <Slider />
+            <Grid item xs>
+              <Slider aria-labelledby="continuous-slider"/>
             </Grid>
           </Grid>
         </div>

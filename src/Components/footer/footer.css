@@ -50,3 +50,7 @@
 .footer__songInfo > p {
     font-size: 12px;
 }
+
+.footer__green{
+    color: green;
+}
