@@ -42,6 +42,14 @@ function MainComponent() {
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist().then((response)=>{
+       dispatch({
+         type:"SET_DISCOVER_WEEKLY",
+         discover_weekly:response
+       }) 
+      })
+
     }
     console.log("I HAVE A TOKEN >>>", token);
   }, []); //if i wanna run once gives empty but i give here name variable it useEffect() will run when component load as well as when name variable changes
