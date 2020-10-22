@@ -53,10 +53,10 @@ function MainComponent() {
         })
       );
 
-      // dispatch({
-      //   type: "SET_SPOTIFY",
-      //   spotify: spotify,
-      // });
+      dispatch({
+        type: "SET_SPOTIFY",
+        spotify: spotify,
+      });
     }
     console.log("I HAVE A TOKEN >>>", token);
   }, [token, dispatch]); //if i wanna run once gives empty but i give here name variable it useEffect() will run when component load as well as when name variable changes

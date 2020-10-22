@@ -7,7 +7,9 @@
     flex: 0.8;
     color: white;
     background: linear-gradient(transparent,rgb(0,0,0,1));
-    background-color: rgb(91,87,115);
+    /* background-color: rgb(91,87,115); */
+    /* background-color: #333; */
+    background-color: #282828;
 }
 
 .body::-webkit-scrollbar {
@@ -45,6 +47,10 @@
 .body__songs{
     z-index: 1;
     margin: 20px -30px;
+    background-color:#191414;
+    /* background: linear-gradient(transparent,rgb(0,0,0,1)); */
+
+    /* background-color: rgb(25 20 20); */
 }
 
 .body__icons {
@@ -55,7 +61,7 @@
 
 .body__icons > .MuiSvgIcon-root {
     margin-right:20px;
-    /* color: green; */
+    color: #1DB954;
 }
 
 .body__info > img {

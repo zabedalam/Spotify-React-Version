@@ -3,12 +3,13 @@ import Header from "../header/header";
 import "./body.css";
 import SongRow from "../songRow/songRow"
 import {useDataLayerValue} from "../datalayer/datalayer"
+import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 export default function Body({spotify}) {
-  const [{discover_weekly},dispatch]=useDataLayerValue()
+  const [{discover_weekly,playing},dispatch]=useDataLayerValue()
 
   const playPlaylist = (id) => {
     spotify
@@ -28,6 +29,23 @@ export default function Body({spotify}) {
         });
       });
   };
+
+  // const handlePlayPause = () => {
+  //   if (playing) {
+  //     spotify.pause();
+  //     dispatch({
+  //       type: "SET_PLAYING",
+  //       playing: false,
+  //     });
+  //   } else {
+  //     spotify.play();
+  //     dispatch({
+  //       type: "SET_PLAYING",
+  //       playing: true,
+  //     });
+  //   }
+  // };
+
   const playSong=(id)=>{
     spotify
     .play({
@@ -66,8 +84,21 @@ export default function Body({spotify}) {
         </div>
         <div className="body__songs">
           <div className="body__icons">
-<PlayCircleFilledIcon className="body__shuffle" 
-onClick={playPlaylist}/>
+{/* <PlayCircleFilledIcon className="body__shuffle" 
+onClick={playPlaylist}/> */}
+ {playing ? (
+          <PauseCircleFilledIcon
+            onClick={playPlaylist}
+            fontSize="large"
+            className="body__shuffle"
+          />
+        ) : (
+          <PlayCircleFilledIcon
+            onClick={playPlaylist}
+            fontSize="large"
+            className="body__shuffle"
+          />
+        )}
 <FavoriteIcon fontSize="large"/>
 <MoreHorizIcon/>
           </div>

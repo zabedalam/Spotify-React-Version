@@ -90,12 +90,12 @@ export default function Footer({ spotify }) {
         </div> */}
         {item ? (
           <div className="footer__songInfo">
-            <h4>{item.name}</h4>
+            <h6>{item.name}</h6>
             <p>{item.artists.map((artist) => artist.name).join(", ")}</p>
           </div>
         ) : (
           <div className="footer__songInfo">
-            <h4>No song is playing</h4>
+            <h6>No song is playing</h6>
             <p>...</p>
           </div>
         )}
