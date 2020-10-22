@@ -1,9 +1,4 @@
-import React, { useEffect, useState } from "react";
-// import {Container} from "reactstrap"
-// import HomePage from "./HomePage"
-// import Navbar from "./Navbar";
-// import SideNavbar from "./SideNavbar";
-// import Footer from "./Footer";
+import React, { useEffect } from "react";
 import Login from "../Components/login/login";
 import { getTokenFromResponse } from "../Components/spotify/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
@@ -13,7 +8,7 @@ import { useDataLayerValue } from "../Components/datalayer/datalayer";
 const spotify = new SpotifyWebApi();
 function MainComponent() {
   // const [token,setToken]=useState(null)
-  const [{ user, token,playlists }, dispatch] = useDataLayerValue(); //Pulling data from reducer or data layer
+  const [{ token }, dispatch] = useDataLayerValue(); //Pulling data from reducer or data layer
 
   //useEffect() Run code based on given condition
   useEffect(() => {
@@ -21,12 +16,13 @@ function MainComponent() {
     window.location.hash = "";
     const _token = hash.access_token;
     if (_token) {
-      //  setToken(_token)
+      spotify.setAccessToken(_token)
       dispatch({
         type: "SET_TOKEN",
         token: _token,
       });
-      spotify.setAccessToken(_token);
+
+      // spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch({
           //this dispatch writing data to data layer
@@ -57,22 +53,22 @@ function MainComponent() {
         })
       );
 
-      dispatch({
-        type: "SET_SPOTIFY",
-        spotify: spotify,
-      });
+      // dispatch({
+      //   type: "SET_SPOTIFY",
+      //   spotify: spotify,
+      // });
     }
     console.log("I HAVE A TOKEN >>>", token);
   }, [token, dispatch]); //if i wanna run once gives empty but i give here name variable it useEffect() will run when component load as well as when name variable changes
-  console.log("🐱‍", user);
+  // console.log("🐱‍", user);
   console.log("🐱‍", token);
-  console.log("‍playlist", playlists);
+  // console.log("‍playlist", playlists);
 
   return (
     <div>
       {!token && <Login />}
       {token && <Player spotify={spotify} />}
-      {/* {token ? <Player spotify={spotify} /> : <Login />} */}
+      {/* {user ? <Player spotify={spotify} /> : <Login />} */}
       {/* //     <Navbar></Navbar>
             //     <SideNavbar></SideNavbar>
             // <HomePage></HomePage>
