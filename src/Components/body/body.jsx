@@ -13,7 +13,7 @@ export default function Body({spotify}) {
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        context_uri: `spotify:playlist:7IPRB6fWd78eSfJ2c6wJ4Z`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -54,7 +54,7 @@ export default function Body({spotify}) {
         <div className="body__info">
         {/* <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGAgxKJNTdFRg/profile-displayphoto-shrink_200_200/0?e=1608768000&v=beta&t=jQsB84R2mIpAt4pnFa1AFp2u-jgj4LpBoH6Seiq9A3Q" 
         alt="user images"/> */}
-        <img src={discover_weekly?.images[0]} 
+        <img src={discover_weekly?.images[0].url} 
         alt="user images"/>
         <div className="body__infoText">
           <strong>PLAYLIST</strong>
@@ -66,15 +66,24 @@ export default function Body({spotify}) {
         </div>
         <div className="body__songs">
           <div className="body__icons">
-<PlayCircleFilledIcon className="body_shuffle"/>
+<PlayCircleFilledIcon className="body__shuffle" 
+onClick={playPlaylist}/>
 <FavoriteIcon fontSize="large"/>
 <MoreHorizIcon/>
           </div>
-          {/* songs here */}
+          {/* <div className="body__background"> */}
+            {/* songs here */}
           {discover_weekly?.tracks.items.map((item)=>(
             <SongRow playSong={playSong} track={item.track}/>
           ))}
+          {/* </div> */}
+          
         </div>
+        {/* <div className="body__background">
+        {discover_weekly?.tracks.items.map((item)=>(
+            <SongRow playSong={playSong} track={item.track}/>
+          ))}
+        </div> */}
        
       </div>
     </>
