@@ -105,7 +105,7 @@ onClick={playPlaylist}/> */}
           {/* <div className="body__background"> */}
             {/* songs here */}
           {discover_weekly?.tracks.items.map((item)=>(
-            <SongRow playSong={playSong} track={item.track}/>
+            <SongRow key={item.id} playSong={playSong} track={item.track}/>
           ))}
           {/* </div> */}
           
