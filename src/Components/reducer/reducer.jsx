@@ -1,17 +1,22 @@
 export const initialState = {
   user: null,
   playlists: [],
+  // playlist:null,
   playing: false,
   item: null,
   token: null,
   spotify: null,
+  index:0,
+  tab:null,
+  artistId:null,
+  paused:false,
   discover_weekly: null,
   top_artists: null,
 };
 
+//Action ->type,[payload]
 const reducer = (state, action) => {
   console.log(action);
-  //Action ->type,[payload]
   switch (action.type) {
     case "SET_USER":
       return {
@@ -59,6 +64,30 @@ const reducer = (state, action) => {
       return {
         ...state,
         discover_weekly: action.discover_weekly,
+      };
+
+      case 'SET_PAUSE':
+      return {
+        ...state,
+        paused: action.paused
+      };
+
+    case 'SET_TAB':
+      return {
+        ...state,
+        tab: action.tab
+      };
+
+      case 'SET_INDEX':
+     return {
+       ...state,
+       index: action.index
+     };
+
+    case 'SET_ARTIST':
+      return {
+        ...state,
+        artistId: action.artistId
       };
     default:
       return state;
