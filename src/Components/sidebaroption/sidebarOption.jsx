@@ -1,12 +1,23 @@
 import React from "react";
 import "./sidebarOption.css";
 
-export default function SidebarOption({ title, Icon }) {
+export default function SidebarOption({ title, Icon, active, handleClick }) {
   return (
     <>
-      <div className="sidebarOption">
+      <div
+        className={`sidebarOption ${
+          active && active === title && "sidebarOption__active"
+        }`}
+        onClick={handleClick}
+      >
         {Icon && <Icon className="sidebarOption__icon" />}
-        {Icon ? <h6>{title}</h6> : <p>{title}</p>}
+        {Icon ? (
+          <h6>{title}</h6>
+        ) : (
+          <div>
+            <p>{title}</p>
+          </div>
+        )}
       </div>
     </>
   );
@@ -16,13 +27,10 @@ export default function SidebarOption({ title, Icon }) {
 // import SpotifyWebApi from 'spotify-web-api-js';
 // function SidebarOption({ title, Icon, className, link }) {
 
-
 //   const spotify = new SpotifyWebApi();
 //   const [{ playlists }, dispatch] = useDataLayerValue();
 
-
 //   const changePlaylist = (list) => {
-
 
 //     spotify.getPlaylist(list.id).then(response => {
 //       dispatch({
@@ -30,7 +38,6 @@ export default function SidebarOption({ title, Icon }) {
 //         items: response,
 //       })
 //     })
-
 
 //   }
 
