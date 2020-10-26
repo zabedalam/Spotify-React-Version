@@ -45,7 +45,7 @@ function MainComponent() {
       })
       .catch(err=>alert(err.message))
 
-      spotify.getPlaylist("7IPRB6fWd78eSfJ2c6wJ4Z").then((response) => {
+      spotify.getPlaylist("0Sz7KVYgSsNpEXOHwmuWFe").then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
