@@ -1,4 +1,4 @@
-.footer{
+/* .footer{
     position: fixed;
     display:flex;
     justify-content: space-between;
@@ -40,13 +40,11 @@
     width: 60px;
     margin-right: 20px;
     object-fit: contain;
-    /* min-width: 10px; */
 }
 
 .footer__songInfo > h6 {
     margin-top: 15px;
     margin-bottom: 5px;
-    /* min-width: 20px; */
 }
 
 .footer__songInfo > p {
@@ -65,4 +63,171 @@
 
 .footer__right * .MuiSlider-root {
     color: green;
-}
+} */
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #282828;
+    padding: 20px;
+    height: 85px;
+  }
+  
+  .footer__left {
+    flex: .3;
+    display: flex;
+    align-items: center;
+    color: white;
+    max-width: 300px;
+    min-width: 150px;
+  }
+  
+  .footer__albumLogo {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    object-fit: contain;
+  }
+  
+  .footer__songInfo {
+    width: 100%;
+  }
+  
+  .footer__songInfo > h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .footer__songInfo > p {
+    font-size: 13px;
+    display: block;
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .footer__center {
+      /* max-width: 100%; */
+     flex: .4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    
+    
+    
+  }
+  
+  .footer__centerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    min-width: 300px;
+    padding:0 100px;
+    color: silver;
+    
+    margin-bottom: 5px;
+  }
+  
+  .footer__centerBottom {
+    flex: .5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__centerBottom > p {
+    color: silver;
+    font-size: 11px;
+  }
+  
+  .footer__centerBottom .MuiSlider-root {
+    color: lightgray;
+  }
+  
+  .footer__centerBottom .MuiSlider-root:active {
+    color: #1ed15e;
+  }
+  
+  .footer__centerBottom .MuiSlider-root:hover {
+    color: #1ed15e;
+  }
+  
+  .footer__right {
+    flex: .3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-right: 10px;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  .footer__toggle {
+    /* color: #1ed15e; */
+  }
+  
+  .footer__icon:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+    filter: brightness(150%);
+  }
+  
+  .footer__green {
+    color: #1ed15e;
+  }
+  
+  .footer__toggle:hover {
+    filter: brightness(150%);
+  }
+  
+  
+  .footer__right .MuiSlider-root {
+    color: lightgray;
+  }
+  
+  .footer__right .MuiSlider-root:active {
+    color: #1ed15e;
+  }
+  
+  .footer__right .MuiSlider-root:hover {
+    color: #1ed15e;
+  }
+  
+  /* material-ui slider custom style */
+   .MuiSlider-thumb {
+    height: 0px !important;
+    width: 0px !important;
+  }
+  
+  /* thumb appears on hover */
+  .MuiSlider-root:hover .MuiSlider-thumb {
+     height: 14px !important;
+     width: 14px !important;
+     color: white;
+  }
+  
+  /* the color of the line after the thumb */
+   .MuiSlider-rail {
+     color: gray;
+     height: 5px !important;
+     border-radius: 4px !important;
+   }
+  
+   .MuiSlider-track {
+     border-radius: 4px !important;
+     height: 4px !important;
+   }
+  
