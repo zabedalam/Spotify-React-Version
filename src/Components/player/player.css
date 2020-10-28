@@ -1,4 +1,4 @@
-.player{
+/* .player{
     display: flex;
     flex-direction: column;
 }
@@ -6,4 +6,10 @@
 .player__body{
     display: flex;
     flex-grow: 1;
-}
+} */
+
+/* New version */
+.player__body {
+    display: flex;
+  }
+  

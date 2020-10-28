@@ -1,4 +1,4 @@
-.header{
+/* .header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -28,4 +28,58 @@
 
 .header__right > h4 {
     margin-left: 10px;
-}
+} */
+/* New version */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .header__left {
+    display: flex;
+    flex: 0.5;
+    align-items: center;
+    background-color: white;
+    max-width: 330px;
+    min-width: 100px;
+    border-radius: 50px;
+  }
+  
+  .header__left > .MuiSvgIcon-root {
+    color: black;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+  }
+  
+  .header__left > input {
+    border: none;
+    outline: 0;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 50px;
+  }
+  
+  .header__right {
+    display: flex;
+    align-items: center;
+    background-color: #202020;
+    border-radius: 50px;
+    padding: 3px;
+  }
+  
+  .header__right:hover {
+    background-color: #303030;
+    cursor: pointer;
+  }
+  
+  .header__right > h4 {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .header__right > .MuiSvgIcon-root {
+    margin: 0 2px 0 0;
+  }
+  

@@ -9,7 +9,7 @@ import { useDataLayerValue } from "../Components/datalayer/datalayer";
 const spotify = new SpotifyWebApi();
 function MainComponent() {
   // const [token,setToken]=useState(null)
-  const [{ token }, dispatch] = useDataLayerValue(); //Pulling data from reducer or data layer
+  const [{user, token }, dispatch] = useDataLayerValue(); //Pulling data from reducer or data layer
 
   //useEffect() Run code based on given condition
   useEffect(() => {
@@ -47,23 +47,13 @@ function MainComponent() {
 
       spotify.getPlaylist("0Sz7KVYgSsNpEXOHwmuWFe").then((response) => {
         dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
+          type: "SET_PLAYLIST",
+          playlist: response,
         });
       })
       .catch(err=>alert(err.message))
 
-      // spotify.getMyTopArtists().then((response) =>
-      //   dispatch({
-      //     type: "SET_TOP_ARTISTS",
-      //     artists: response,
-      //   })
-      // );
-
-      // dispatch({
-      //   type: "SET_SPOTIFY",
-      //   spotify: spotify,
-      // });
+      
     }
     console.log("I HAVE A TOKEN >>>", token);
   }, []); //if i wanna run once gives empty but i give here name variable it useEffect() will run when component load as well as when name variable changes

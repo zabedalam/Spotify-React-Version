@@ -1,0 +1,31 @@
+.category > a > img {
+    max-width: 280px;
+    max-height: 280px;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
+  }
+  
+  .category > h3 {
+    position: absolute;
+    margin: 15px 0 0 15px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .category > a > img {
+      width: 230px;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .category > a > img {
+      width: 180px;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .category > a > img {
+      width: 280px;
+    }
+  }
+  
