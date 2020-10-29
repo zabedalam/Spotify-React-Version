@@ -10,7 +10,7 @@ const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",
-  "user-top-read",// get a user's top artists and tracks
+  "user-top-read", // get a user's top artists and tracks
   "user-modify-playback-state",
 ];
 

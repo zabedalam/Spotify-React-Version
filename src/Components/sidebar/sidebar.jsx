@@ -72,9 +72,6 @@ export default function Sidebar({ spotify }) {
         <br />
         <strong className="sidebar__title">PLAYLISTS</strong>
         <hr />
-        {/* <SidebarOption title="Hip hop"/>
-     <SidebarOption title="Rock"/>
-     <SidebarOption title="RnB"/> */}
         <div className="sidebar__bottom">
           <div className="sidebar__playlist">
             {playlists?.items?.map((playlist, i) => (

@@ -1,74 +1,72 @@
-
 .playlist__info {
-    display: flex;
-    align-items: flex-end;
-    padding: 5px;
-  }
-  
-  .playlist__info > img {
-    width: 230px;
-    height: 230px;
-    box-shadow: 10px 8px 50px rgba(0, 0, 0, 0.75);
-  }
-  
-  .playlist__infoText {
-    flex: 1;
-    padding-left: 20px;
-    min-width: 500px;
-  }
-  
-  .playlist__infoText > strong {
-    font-size: small;
-  }
-  
-  .playlist__infoText > h2 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .playlist__infoText > p {
-    font-size: 14px;
-  }
-  
-  .playlist__icons {
-    display: flex;
-    align-items: center;
-  }
-  
-  .playlist__icons > .MuiSvgIcon-root {
-    margin-right: 10px;
-    margin-left: 15px;
-  }
-  
-  .playlist__play {
-    font-size: 70px !important;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #1ed15e;
-  }
-  
-  .playlist__play:hover {
-    transition: 100ms transform ease-in;
-    transform: scale(1.08);
-  }
-  
-  .playlist__fav {
-    color: #1ed15e;
-  }
-  
-  .playlist__more {
-    color: lightgray;
-  }
-  
-  .playlist__more:hover {
-    color: white;
-  }
-  
-  .playlist__songs {
-    margin: 20px -30px;
-  }
-  
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+}
+
+.playlist__info > img {
+  width: 230px;
+  height: 230px;
+  box-shadow: 10px 8px 50px rgba(0, 0, 0, 0.75);
+}
+
+.playlist__infoText {
+  flex: 1;
+  padding-left: 20px;
+  min-width: 500px;
+}
+
+.playlist__infoText > strong {
+  font-size: small;
+}
+
+.playlist__infoText > h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist__infoText > p {
+  font-size: 14px;
+}
+
+.playlist__icons {
+  display: flex;
+  align-items: center;
+}
+
+.playlist__icons > .MuiSvgIcon-root {
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.playlist__play {
+  font-size: 70px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #1ed15e;
+}
+
+.playlist__play:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}
+
+.playlist__fav {
+  color: #1ed15e;
+}
+
+.playlist__more {
+  color: lightgray;
+}
+
+.playlist__more:hover {
+  color: white;
+}
+
+.playlist__songs {
+  margin: 20px -30px;
+}
