@@ -2,7 +2,11 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with app's client ID redirect URI and desire scope
 const clientId = "a38beef18a7c4532999d267c873ff2b4";
-const redirectUri = "http://localhost:3000/";
+// const redirectUri = "http://localhost:3000/";
+// const redirectUri = "https://spotify-clone-1d953.web.app/";
+const redirectUri = "https://spotify-clone-3879d.web.app/";
+
+
 
 // Scopes enable your application to access specific API endpoints on behalf of a user.
 // The set of scopes you pass in your call determines the access permissions that the user is required to grant.
